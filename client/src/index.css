@@ -1,0 +1,12 @@
+body { background: #f7f7f8; color: #222; }
+button {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  background: white;
+}
+button:hover { background: #f0f0f0; }
+input, select { padding: 8px; border-radius: 6px; border: 1px solid #ccc; }
+.module { display: flex; flex-direction: column; gap: 12px; }
+.card { background: white; padding: 12px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
