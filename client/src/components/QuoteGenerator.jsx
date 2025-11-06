@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { API_BASE } from '../App';
 
 export default function QuoteGenerator() {
   const [quote, setQuote] = useState(null);
@@ -8,7 +9,7 @@ export default function QuoteGenerator() {
   async function fetchQuote() {
     setLoading(true);
     try {
-      const res = await axios.get('http://localhost:3001/api/quote');
+      const res = await axios.get(`${API_BASE}/api/quote`);
       setQuote(res.data);
     } catch (err) {
       console.error(err);

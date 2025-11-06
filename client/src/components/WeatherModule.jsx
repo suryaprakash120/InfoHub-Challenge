@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { API_BASE } from '../App';
 
 export default function WeatherModule() {
   const [city, setCity] = useState('Hyderabad');
@@ -9,7 +10,7 @@ export default function WeatherModule() {
   async function fetchWeather() {
     setLoading(true);
     try {
-      const res = await axios.get('http://localhost:3001/api/weather', { params: { city }});
+      const res = await axios.get(`${API_BASE}/api/weather`, { params: { city }});
       setWeather(res.data);
     } catch (err) {
       console.error(err);

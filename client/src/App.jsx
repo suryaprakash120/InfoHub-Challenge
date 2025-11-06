@@ -3,6 +3,11 @@ import WeatherModule from './components/WeatherModule';
 import CurrencyConverter from './components/CurrencyConverter';
 import QuoteGenerator from './components/QuoteGenerator';
 
+// client/src/apiBase.js
+export const API_BASE =
+  import.meta.env.VITE_API_URL || 'http://localhost:3001';
+
+
 export default function App() {
   const [tab, setTab] = useState('weather');
 
